@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- TextView to display the current time remaining for workout phase -->
+    <TextView
+        android:id="@+id/workout_timer_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Workout Time Remaining: 00:00"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <!-- EditText to allow the user to set the duration of the workout -->
+    <EditText
+        android:id="@+id/workout_duration_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Workout Duration"
+        android:inputType="number"
+        android:paddingBottom="16dp"/>
+
+    <!-- TextView to display the current time remaining for rest phase -->
+    <TextView
+        android:id="@+id/rest_timer_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rest Time Remaining: 00:00"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <!-- EditText to allow the user to set the rest periods between sets -->
+    <EditText
+        android:id="@+id/rest_duration_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Rest Duration"
+        android:inputType="number"
+        android:paddingBottom="16dp"/>
+
+    <!-- ProgressBar to show the progress of the current phase -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:paddingBottom="16dp"/>
+
+    <!-- Buttons to start and stop the timer -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"/>
+
+    </LinearLayout>
+
+</LinearLayout>
